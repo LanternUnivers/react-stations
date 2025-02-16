@@ -8,9 +8,17 @@ import { useState } from 'react';
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = useState("https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg")
-  const updateDogImage = () => {
-    setDogUrl('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg')
+
+  const updateDogImage = async () => {
+    try {
+      const response = await fetch('https://dog.ceo/api/breeds/image/random')
+      const data = await response.json()
+      setDogUrl(data.message)
+    } catch (error) {
+      console.error('Error fetching dog image:', error)
+    }
   }
+  
   return (
     <div>
       <header>
