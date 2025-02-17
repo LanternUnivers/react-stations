@@ -4,7 +4,6 @@ import './App.css'
 import Header from './Header';
 import Description from './Description';
 import DogListContainer from './DogListContainer';
-import { useState } from 'react';
 
 /**
  * @type {() => JSX.Element}

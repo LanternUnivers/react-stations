@@ -1,6 +1,6 @@
 // @ts-check
 
-import React from 'react';
+import React from "react";
 
 export const BreedsSelect = ({ breeds, selectedBreed, onSelectBreed }) => {
   return (
